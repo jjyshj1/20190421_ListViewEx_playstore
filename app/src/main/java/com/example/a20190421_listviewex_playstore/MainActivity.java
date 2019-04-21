@@ -3,6 +3,8 @@ package com.example.a20190421_listviewex_playstore;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.a20190421_listviewex_playstore.adapter.AppAdapter;
 import com.example.a20190421_listviewex_playstore.databinding.ActivityMainBinding;
@@ -30,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         mAppAdapter = new AppAdapter(MainActivity.this, appList);
         act.appRankList.setAdapter(mAppAdapter);
+        act.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "확인눌렸습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     void fillApp(){

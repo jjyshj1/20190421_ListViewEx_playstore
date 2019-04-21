@@ -45,8 +45,8 @@ public class AppAdapter extends ArrayAdapter<App> {
         rankAndTitleTxt.setText(String.format("%d., %s", appData.rank, appData.title));
         companyTxt.setText(appData.companuName);
 
-        if(appData.isMine){  //==true생략가능,,,설치된 항목이면 "설치한항목" 표시되므로 빈칸임
-
+        if(appData.isMine){  //==true생략가능
+            pricOrInstalledTxt.setText("설치된항목");
         }
         else{
             pricOrInstalledTxt.setText(String.format("%,d원",appData.price));//천단위 컴마 표시
