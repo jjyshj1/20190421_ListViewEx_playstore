@@ -1,5 +1,6 @@
 package com.example.a20190421_listviewex_playstore;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAppAdapter = new AppAdapter(MainActivity.this, appList);
         act.appRankList.setAdapter(mAppAdapter);
+
         act.okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +45,20 @@ public class MainActivity extends AppCompatActivity {
         act.appRankList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, String.format("%d번줄 선택",position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, String.format("%d번줄 선택",position), Toast.LENGTH_SHORT).show();
+
+
+                App clickedAppData = appList.get(position);
+
+                Intent intent = new Intent(MainActivity.this,AppDetailActivity.class);
+
+                intent.putExtra("앱정보",clickedAppData);
+
+//                intent.putExtra("제목",clickedAppData.title);
+//                intent.putExtra("화사명",clickedAppData.companuName);
+                startActivity(intent);
+
+
             }
         });
 
@@ -54,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;  //false일 경우 작동에 차이가 있음 비교해서 숙지
             }
         });
+
+
+
 
     }
 
