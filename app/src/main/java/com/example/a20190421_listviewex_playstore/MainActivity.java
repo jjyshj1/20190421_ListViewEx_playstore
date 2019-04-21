@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, String.format("%d번줄을 오래 눌렀습니다.",position), Toast.LENGTH_SHORT).show();
-                return true;
+                return true;  //false일 경우 작동에 차이가 있음 비교해서 숙지
             }
         });
 
