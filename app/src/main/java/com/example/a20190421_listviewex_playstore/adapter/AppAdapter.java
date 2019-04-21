@@ -51,6 +51,8 @@ public class AppAdapter extends ArrayAdapter<App> {
         else{
             pricOrInstalledTxt.setText(String.format("%,d원",appData.price));//천단위 컴마 표시
         }
+
+
         return row;
     }
 }
