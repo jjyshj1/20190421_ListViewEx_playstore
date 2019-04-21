@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.a20190421_listviewex_playstore.adapter.AppAdapter;
@@ -39,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        act.appRankList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, String.format("%d번줄 선택",position), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
