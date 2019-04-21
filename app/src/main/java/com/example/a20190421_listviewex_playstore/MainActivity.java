@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        act.appRankList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, String.format("%d번줄을 오래 눌렀습니다.",position), Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
+
     }
 
     void fillApp(){
