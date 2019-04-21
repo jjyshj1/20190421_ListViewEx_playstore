@@ -24,6 +24,7 @@
             android:layout_margin="10dp">
 
             <TextView
+                android:id="@+id/rankAndTitleTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
@@ -34,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/companyTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="게임회사"/>
@@ -49,22 +51,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
+                    android:id="@+id/star1img"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/star_empty"/>
                 <ImageView
+                    android:id="@+id/star2img"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/star_empty"/>
                 <ImageView
+                    android:id="@+id/star3img"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/star_empty"/>
                 <ImageView
+                    android:id="@+id/star4img"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/star_empty"/>
                 <ImageView
+                    android:id="@+id/star5img"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/star_empty"/>
@@ -76,6 +83,7 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/priceOrInstalledTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="설치된 항목"/>

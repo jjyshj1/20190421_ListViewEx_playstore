@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.example.a20190421_listviewex_playstore.R;
 import com.example.a20190421_listviewex_playstore.datas.App;
@@ -36,6 +37,10 @@ public class AppAdapter extends ArrayAdapter<App> {
         }
 
 
+        App appData = mList.get(position);
+        TextView rankAndTitleTxt = row.findViewById(R.id.rankAndTitleTxt);
+        TextView companyTxt = row.findViewById(R.id.companyTxt);
+        TextView pricOrInstalledTxt = row.findViewById(R.id.priceOrInstalledTxt);
 
         return row;
     }
